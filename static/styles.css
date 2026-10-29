@@ -1,0 +1,376 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f3040;
+  background: #f4f7fa;
+  font-size: 14px;
+  --scrollbar-track: #edf3f5;
+  --scrollbar-thumb: #80aeb8;
+  --scrollbar-hover: #4e8d9c;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f7fa; }
+/* Keep scrollbars quiet and consistent with the cool blue-gray UI. */
+html { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); }
+body.drawer-open { overflow: hidden; }
+html::-webkit-scrollbar,
+body::-webkit-scrollbar { width: 10px; height: 10px; }
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb { border: 2px solid transparent; border-radius: 999px; background: var(--scrollbar-thumb); background-clip: padding-box; }
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); background-clip: padding-box; }
+button, input { font: inherit; }
+.app-shell { min-height: 100vh; display: flex; }
+.sidebar { width: 244px; flex: 0 0 244px; min-height: 100vh; color: #b9d2dc; background: #103d51; box-shadow: 5px 0 18px #183a4b1f; display: flex; flex-direction: column; }
+.brand { height: 70px; padding: 0 25px; display: flex; align-items: center; gap: 11px; color: #fff; font-size: 21px; font-weight: 760; border-bottom: 1px solid #ffffff12; }
+.brand-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 9px; color: #0e3b4f; background: #f4c35f; font-weight: 900; }
+.school-name { margin: 24px 22px 9px; color: #6d9bac; font-size: 9px; font-weight: 700; letter-spacing: 1.25px; }
+.nav-item, .subnav-item { display: flex; align-items: center; text-decoration: none; color: inherit; }
+.nav-item, .subnav-item { width: 100%; border: 0; background: transparent; text-align: left; font: inherit; cursor: pointer; }
+.nav-item { height: 44px; padding: 0 22px; gap: 12px; font-weight: 540; }
+.nav-item:hover, .subnav-item:hover { color: #fff; background: #ffffff0c; }
+.nav-icon { width: 18px; color: #8cb6c3; text-align: center; font-size: 15px; }
+.nav-section-title { width: 100%; height: 44px; padding: 0 22px; border: 0; color: #fff; background: transparent; display: flex; align-items: center; justify-content: space-between; text-align: left; font: inherit; font-weight: 650; cursor: pointer; }
+.nav-section-title .nav-icon { margin-right: 12px; }
+.chevron { color: #9fc0cc; font-size: 14px; transition: transform .16s ease; }
+.subnav { padding: 0 10px 9px 22px; }
+.nav-section:not(.open) .subnav { display: none; }
+.nav-section:not(.open) .chevron { transform: rotate(180deg); }
+.subnav-item { height: 31px; padding: 0 12px 0 23px; position: relative; border-radius: 6px; color: #9fbcc7; font-size: 12px; }
+.subnav-item:before { content: ""; position: absolute; left: 8px; width: 6px; height: 6px; border: 1.5px solid #83adba; border-radius: 50%; }
+.subnav-item.active { color: #fff; background: #176078; box-shadow: inset 3px 0 #58c4dd; font-weight: 650; }
+.subnav-item.active:before { border-color: #66d1e0; background: #66d1e0; }
+.sidebar-footer { margin-top: auto; padding: 18px 23px; border-top: 1px solid #ffffff12; display: flex; align-items: center; gap: 10px; font-size: 12px; }
+.help-dot { width: 20px; height: 20px; border: 1px solid #6b99a9; border-radius: 50%; display: grid; place-items: center; }
+.main-shell { min-width: 0; flex: 1; }
+.topbar { height: 70px; padding: 0 34px; border-bottom: 1px solid #e2e8ef; background: #fff; display: flex; align-items: center; }
+.breadcrumbs { display: flex; align-items: center; gap: 10px; color: #8a97a8; font-size: 13px; }
+.breadcrumbs b { color: #c5ccd5; font-weight: 400; }
+.breadcrumbs strong { color: #29394a; font-weight: 650; }
+.content { max-width: 1500px; margin: 0 auto; padding: 30px 34px 60px; }
+.page-heading { margin-bottom: 22px; }
+.eyebrow { margin: 0 0 6px; color: #4e86a0; font-size: 10px; font-weight: 800; letter-spacing: 1.4px; }
+.page-heading h1 { margin: 0; color: #233447; font-size: 28px; line-height: 1.1; }
+.subheading { margin: 9px 0 0; color: #8492a4; }
+.filter-card { margin-bottom: 18px; padding: 18px; border: 1px solid #e4eaf0; border-radius: 11px; background: #fff; box-shadow: 0 4px 14px #2a4c6508; display: flex; gap: 13px; align-items: flex-end; }
+.field { min-width: 165px; display: flex; flex-direction: column; gap: 7px; }
+.field label { color: #728195; font-size: 11px; font-weight: 700; }
+.field input { height: 37px; padding: 0 10px; border: 1px solid #d8e0e8; border-radius: 6px; outline: 0; color: #354457; background: #fff; }
+.field input:focus { border-color: #5da9b5; box-shadow: 0 0 0 3px #5da9b51f; }
+.search-field { flex: 1; min-width: 220px; }
+.input-wrap { height: 37px; padding: 0 10px; border: 1px solid #d8e0e8; border-radius: 6px; color: #91a0af; display: flex; align-items: center; }
+.input-wrap > span { display: inline-flex; flex: 0 0 auto; pointer-events: none; }
+.input-wrap svg { width: 15px; height: 15px; }
+.input-wrap input { flex: 1; min-width: 0; width: 100%; height: 100%; padding: 0 0 0 7px; border: 0; outline: 0; background: transparent; }
+.filter-actions { display: flex; gap: 8px; }
+.primary-button, .ghost-button { height: 37px; padding: 0 18px; border-radius: 7px; cursor: pointer; font-weight: 700; }
+.primary-button { border: 0; color: #fff; background: #238ba0; }
+.primary-button:hover { background: #1a7183; }
+.ghost-button { border: 1px solid #d9e1e8; color: #7b8797; background: #fff; }
+.ghost-button:hover { background: #f5f8fa; }
+.card { border: 1px solid #e3e9ef; border-radius: 11px; background: #fff; box-shadow: 0 4px 16px #2a4c6508; }
+.attendance-card { overflow: hidden; }
+.card-heading { padding: 20px 21px 16px; border-bottom: 1px solid #ecf0f4; }
+.card-heading h2 { margin: 0; color: #26384a; font-size: 17px; }
+.card-heading p { margin: 6px 0 0; color: #8794a3; font-size: 12px; }
+.table-wrap { overflow: auto; }
+.table-wrap, .payroll-body, .payroll-sidebar, .payroll-table-wrap, .salary-breakdown, .voucher-paper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+:is(.table-wrap, .payroll-body, .payroll-sidebar, .payroll-table-wrap, .salary-breakdown, .voucher-paper)::-webkit-scrollbar { width: 10px; height: 10px; }
+:is(.table-wrap, .payroll-body, .payroll-sidebar, .payroll-table-wrap, .salary-breakdown, .voucher-paper)::-webkit-scrollbar-track { background: var(--scrollbar-track); border-radius: 999px; }
+:is(.table-wrap, .payroll-body, .payroll-sidebar, .payroll-table-wrap, .salary-breakdown, .voucher-paper)::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--scrollbar-thumb);
+  background-clip: padding-box;
+}
+:is(.table-wrap, .payroll-body, .payroll-sidebar, .payroll-table-wrap, .salary-breakdown, .voucher-paper)::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+  background-clip: padding-box;
+}
+.attendance-card table { width: 100%; min-width: 940px; border-collapse: separate; border-spacing: 0; }
+.attendance-card th, .attendance-card td { padding: 10px 8px; border-right: 1px solid #f0f3f6; border-bottom: 1px solid #edf1f4; text-align: center; white-space: nowrap; font-size: 11px; }
+.attendance-card th { height: 48px; position: sticky; top: 0; z-index: 1; color: #738293; background: #f7fafb; font-weight: 750; }
+.attendance-card th:first-child, .attendance-card td:first-child { min-width: 180px; position: sticky; left: 0; text-align: left; background: #fff; z-index: 2; }
+.attendance-card th:first-child { background: #f7fafb; z-index: 3; }
+.attendance-card th.day-head { min-width: 54px; }
+.attendance-card th.day-head small { display: block; margin-top: 2px; color: #a1adba; font-size: 9px; font-weight: 550; }
+.staff-row td { height: 55px; }
+.staff-cell { display: flex; align-items: center; gap: 9px; }
+.staff-avatar { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #27788a; background: #e5f4f5; font-size: 10px; font-weight: 800; }
+.staff-name { color: #2d4051; font-size: 12px; font-weight: 700; }
+.staff-role { display: block; margin-top: 3px; color: #96a2af; font-size: 10px; }
+.day-cell { min-width: 53px; }
+.day-cell.warning .shift-code { color: #bc7d27; }
+.day-cell.empty { color: #cdd5dc; }
+.shift-chip { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; }
+.shift-code { color: #2e6e7e; font-size: 10px; font-weight: 700; }
+.shift-hours { color: #8796a5; font-size: 10px; }
+.salary-button { display: block; margin-top: 3px; padding: 3px 0; border: 0; color: #26859a; background: transparent; font-size: 11px; font-weight: 750; cursor: pointer; }
+.salary-button:hover { text-decoration: underline; }
+.empty-state { padding: 42px; color: #8b98a5; text-align: center; }
+.update-view { min-height: 430px; border: 1px solid #e3e9ef; border-radius: 11px; background: #fff; color: #8695a2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.update-mark { width: 46px; height: 46px; margin-bottom: 14px; border-radius: 50%; display: grid; place-items: center; color: #238ba0; background: #e6f4f5; font-size: 26px; }
+.update-view h1 { margin: 0; color: #294153; font-size: 25px; }
+.update-view p { margin: 8px 0 0; font-size: 13px; }
+.hidden { display: none !important; }
+.drawer { position: fixed; inset: 0; z-index: 20; padding: 24px; display: flex; align-items: center; justify-content: center; }
+.drawer-backdrop { position: absolute; inset: 0; background: #18314680; }
+.drawer-panel { width: min(980px, 100%); height: min(600px, calc(100vh - 48px)); position: relative; z-index: 1; overflow: hidden; padding: 0; border-radius: 10px; background: #edf0f5; box-shadow: 0 18px 55px #16304455; }
+.close-button { position: absolute; top: 15px; right: 18px; z-index: 3; width: 32px; height: 32px; border: 0; border-radius: 50%; color: #68798a; background: #f2f5f7; font-size: 22px; cursor: pointer; }
+.drawer-kicker { color: #4f93a0; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; }
+.drawer-title { margin: 7px 36px 0 0; color: #213648; font-size: 24px; }
+.drawer-subtitle { margin: 7px 0 20px; color: #7e8c9b; font-size: 12px; }
+.drawer-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-bottom: 20px; }
+.drawer-stat { padding: 11px; border: 1px solid #e7eef1; border-radius: 8px; background: #f6f9fa; }
+.drawer-stat b { display: block; color: #263d4e; font-size: 17px; }
+.drawer-stat span { display: block; margin-top: 3px; color: #8996a3; font-size: 10px; }
+.detail-section { margin-bottom: 14px; overflow: hidden; border: 1px solid #e3ebee; border-radius: 9px; }
+.detail-section-title { padding: 12px 14px; border-bottom: 1px solid #e7eef0; color: #496576; background: #f8fbfb; font-size: 12px; font-weight: 750; }
+.salary-lines { width: 100%; border-collapse: collapse; }
+.salary-lines th, .salary-lines td { padding: 11px 13px; border-bottom: 1px solid #edf2f4; text-align: left; font-size: 12px; }
+.salary-lines th { color: #8997a4; font-size: 10px; font-weight: 700; }
+.salary-lines td:last-child, .salary-lines th:last-child { text-align: right; }
+.salary-lines tr:last-child td { border-bottom: 0; }
+.line-rate { color: #788897; font-size: 11px; }
+.line-total { color: #33495a; font-weight: 750; }
+.adjustments { padding: 13px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.adjustments label { color: #6f7f8e; font-size: 11px; font-weight: 700; }
+.adjustments input { width: 100%; height: 37px; margin-top: 6px; padding: 0 9px; border: 1px solid #d8e1e7; border-radius: 6px; }
+.validation { margin: 0 13px 13px; padding: 11px 12px; border-radius: 7px; font-size: 11px; line-height: 1.5; }
+.validation.ok { color: #287957; background: #eaf8f2; }
+.validation.bad { color: #875c16; background: #fff4df; }
+.detail-total { padding: 15px 14px; color: #255f6d; background: #edf8f8; display: flex; align-items: center; justify-content: space-between; }
+.detail-total span { font-size: 12px; font-weight: 700; }
+.detail-total strong { color: #1a8794; font-size: 22px; }
+.drawer-actions { margin-top: 18px; display: flex; justify-content: flex-end; gap: 9px; }
+.drawer-button { height: 38px; padding: 0 16px; border-radius: 7px; cursor: pointer; font-weight: 700; }
+.drawer-button.secondary { border: 1px solid #d7e1e7; color: #637586; background: #fff; }
+.drawer-button.primary { border: 0; color: #fff; background: #238ba0; }
+.drawer-button.primary:disabled { background: #b8cbd0; cursor: not-allowed; }
+.save-message { min-height: 18px; margin: 11px 0 0; color: #287957; font-size: 11px; text-align: right; }
+@media (max-width: 1050px) { .sidebar { width: 215px; flex-basis: 215px; } .content { padding: 25px 22px; } .filter-card { flex-wrap: wrap; } .search-field { flex-basis: 100%; } }
+@media (max-width: 700px) { .sidebar { display: none; } .topbar { padding: 0 17px; } .content { padding: 22px 14px 42px; } .field { min-width: calc(50% - 7px); } .filter-actions { width: 100%; } .filter-actions button { flex: 1; } .drawer-panel { padding: 25px 17px 30px; } .adjustments { grid-template-columns: 1fr; } }
+.drawer-panel { width: min(980px, 100%); height: min(600px, calc(100vh - 48px)); padding: 0; background: #edf0f5; }
+#detail { height: 100%; min-height: 0; overflow: hidden; }
+.payroll-layout { height: 100%; min-height: 0; display: grid; grid-template-columns: 160px minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+.payroll-sidebar { min-height: 0; padding: 18px 10px; overflow-y: auto; overscroll-behavior: contain; background: #f8f9fb; border-right: 1px solid #dce2e9; }
+.payroll-search { width: 100%; height: 32px; padding: 0 9px; border: 1px solid #d9e0e7; border-radius: 6px; color: #556575; background: #fff; font-size: 11px; }
+.payroll-staff-list { margin-top: 10px; display: grid; gap: 3px; }
+.payroll-staff { padding: 8px 7px; border: 0; border-radius: 6px; color: #52748a; background: transparent; text-align: left; font-size: 11px; cursor: pointer; }
+.payroll-staff:before { content: "•"; margin-right: 5px; color: #92adbb; }
+.payroll-staff:hover, .payroll-staff.selected { color: #176078; background: #e2f0f4; font-weight: 700; }
+.payroll-main { min-width: 0; min-height: 0; padding: 0 18px; overflow: hidden; display: flex; flex-direction: column; }
+.payroll-heading { min-height: 54px; flex: 0 0 auto; margin: 0 -18px; padding: 0 18px; border-bottom: 1px solid #d9e0e7; display: flex; align-items: center; }
+.payroll-heading h2 { min-width: 0; margin: 0; padding-right: 42px; color: #344b5c; font-size: 15px; font-weight: 600; line-height: 1.5; }
+.payroll-heading h2 span { color: #738594; font-weight: 400; }
+.payroll-body { flex: 1 1 auto; min-height: 0; padding: 12px 8px 16px 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.payroll-body:focus-visible { outline: 2px solid #5da9b5; outline-offset: -2px; }
+.payroll-table-wrap, .salary-breakdown { max-width: 100%; overflow-x: auto; border: 1px solid #dce5eb; border-top: 2px solid #438ca3; border-radius: 6px; background: #fff; }
+.payroll-table, .salary-lines { width: 100%; border-collapse: collapse; }
+.payroll-table th, .payroll-table td { padding: 8px 9px; border-right: 1px solid #edf0f3; border-bottom: 1px solid #e8edf1; text-align: left; color: #536675; font-size: 11px; }
+.payroll-table th { color: #647785; background: #f8fafb; font-size: 10px; font-weight: 700; }
+.payroll-table th:last-child, .payroll-table td:last-child { text-align: right; }
+.payroll-table select { width: 145px; height: 30px; padding: 0 7px; border: 1px solid #d9e0e7; border-radius: 5px; color: #657786; background: #fff; font-size: 11px; }
+.salary-breakdown { margin-top: 10px; }
+.salary-breakdown h3 { margin: 0; padding: 8px 9px; border-bottom: 1px solid #e5eaee; color: #536c7c; font-size: 12px; font-weight: 700; }
+.salary-breakdown .salary-lines th, .salary-breakdown .salary-lines td { padding: 7px 9px; border-right: 1px solid #edf0f3; border-bottom: 1px solid #e8edf1; font-size: 10px; }
+.salary-breakdown .salary-lines th { background: #fbfcfd; color: #71818d; }
+.salary-breakdown .salary-lines td:last-child, .salary-breakdown .salary-lines th:last-child { text-align: right; }
+.payroll-form { margin-top: 10px; padding: 10px 9px; border: 1px solid #dce5eb; border-top: 2px solid #438ca3; border-radius: 6px; background: #fff; display: grid; grid-template-columns: 1fr 1fr; gap: 9px 12px; }
+.payroll-form label { color: #657683; font-size: 10px; }
+.payroll-form input { display: block; width: 100%; height: 32px; margin-top: 4px; padding: 0 9px; border: 1px solid #d9e0e7; border-radius: 5px; text-align: right; font-size: 11px; }
+.payroll-total { grid-column: 1 / -1; padding-top: 7px; border-top: 1px solid #e9edf1; display: flex; justify-content: space-between; color: #617584; font-size: 11px; }
+.payroll-total strong { color: #d44932; font-size: 14px; }
+.payroll-main .validation { margin: 9px 0 0; padding: 8px 9px; font-size: 10px; }
+.payroll-main .validation ul { margin: 6px 0; padding-left: 18px; }
+.payroll-main .validation p { margin: 5px 0 0; }
+.payroll-attendance-note { margin: 0 0 9px; color: #657683; font-size: 11px; line-height: 1.5; }
+.payroll-calculation { display: block; margin-top: 3px; color: #71818d; font-size: 10px; }
+.salary-breakdown .payroll-subtotal td { background: #f4f8fa; font-weight: 700; }
+.payroll-footer { flex: 0 0 auto; margin: 0 -18px; padding: 10px 18px; border-top: 1px solid #d9e0e7; background: #f8fafb; }
+.payroll-submit { min-height: 34px; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px; }
+.payroll-submit .drawer-button { height: 34px; padding: 0 16px; border-radius: 6px; font-size: 12px; }
+.payroll-main .save-message { min-height: 0; margin: 7px 0 0; text-align: right; }
+.payroll-main .save-message:empty { display: none; }
+.submitted-status { margin-right: 10px; color: #347b62; font-size: 11px; font-weight: 700; }
+.email-button { border: 1px solid #2b90a0; color: #237487; background: #fff; }
+.email-button:hover { background: #e8f7f8; }
+.email-button:disabled { border-color: #b9d2d5; color: #6c969b; background: #e5f2f2; cursor: default; }
+.email-success { margin-top: 9px; padding: 8px 9px; border-radius: 3px; color: #287957; background: #eaf8f2; font-size: 10px; }
+.salary-filter-card { margin-bottom: 8px; padding: 8px 7px; border: 0; border-radius: 2px; background: #edf1f7; box-shadow: none; gap: 10px; align-items: center; }
+.salary-filter-card .field { min-width: 145px; gap: 3px; }
+.salary-filter-card .field label { display: block; color: #6f8190; font-size: 10px; font-weight: 700; }
+.salary-filter-card .search-field { min-width: 145px; }
+.salary-filter-card .input-wrap, .salary-filter-card .field input { height: 25px; border-color: #dce3eb; border-radius: 1px; font-size: 9px; }
+.salary-filter-card .input-wrap { padding: 0 6px; }
+.salary-filter-card .input-wrap input { font-size: 9px; }
+.salary-filter-card .filter-actions { gap: 6px; }
+.salary-filter-card .primary-button, .salary-filter-card .ghost-button { height: 25px; padding: 0 9px; border-radius: 1px; font-size: 9px; }
+.salary-tabs { display: flex; gap: 6px; margin: 0 0 12px; border-bottom: 1px solid #dfe7ed; }
+.salary-tab { padding: 9px 14px; border: 0; border-bottom: 2px solid transparent; color: #7b8b99; background: transparent; cursor: pointer; font-size: 12px; font-weight: 700; }
+.salary-tab:hover { color: #237f92; }
+.salary-tab.active { border-bottom-color: #238ba0; color: #237f92; }
+.salary-report-card { overflow: hidden; border-radius: 2px; background: #edf1f7; box-shadow: none; }
+.salary-report-title { min-height: 34px; padding: 9px 8px; border-bottom: 1px solid #d6dde6; color: #3e4d59; font-size: 12px; font-weight: 500; }
+.salary-report-title span { color: #3e4d59; }
+.salary-report-card table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 1120px; }
+.salary-report-card th, .salary-report-card td { height: 25px; padding: 4px 5px; border-right: 1px solid #fff; border-bottom: 1px solid #fff; text-align: left; white-space: nowrap; color: #506574; font-size: 8px; }
+.salary-report-card th { height: 26px; color: #4d6678; background: #cfe2f3; font-size: 7px; font-weight: 750; }
+.salary-report-card td:first-child, .salary-report-card th:first-child { position: sticky; left: 0; z-index: 1; background: #fff; }
+.salary-report-card th:first-child { background: #f7fafb; }
+.salary-report-card td:last-child, .salary-report-card th:last-child { position: sticky; right: 0; z-index: 2; box-shadow: -4px 0 8px #31556b18; background: #fff; }
+.salary-report-card th:last-child { background: #cfe2f3; }
+.salary-report-card td:last-child, .salary-report-card th:last-child { text-align: center; }
+.salary-report-card td:nth-child(n+2):nth-child(-n+13), .salary-report-card th:nth-child(n+2):nth-child(-n+13) { text-align: center; }
+.salary-report-card .staff-cell { gap: 4px; }
+.salary-report-card .staff-avatar { width: 15px; height: 15px; font-size: 6px; }
+.salary-report-card .staff-name { font-size: 8px; font-weight: 600; }
+.salary-report-card .staff-role { display: none; }
+.salary-report-card .salary-status { font-size: 7px; }
+.payment-action { min-width: 92px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 3px 5px; }
+.payment-action label { color: #657884; font-size: 7px; cursor: pointer; }
+.payment-action input { width: 9px; height: 9px; margin: 0 2px 0 0; vertical-align: -1px; accent-color: #238ba0; }
+.paid-method { display: block; margin-bottom: 2px; color: #6e8994; font-size: 7px; }
+.salary-status { display: inline-flex; align-items: center; gap: 5px; color: #7f8d99; font-size: 10px; }
+.salary-status.submitted { color: #2e8668; }
+.salary-status.paid { color: #26839a; }
+.pay-button, .voucher-link { height: 29px; padding: 0 10px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: 750; }
+.pay-button { border: 0; color: #fff; background: #238ba0; }
+.pay-button:hover { background: #1a7183; }
+.pay-button:disabled { color: #6f969e; background: #e1f0f1; cursor: default; }
+.voucher-link { border: 1px solid #c9e0e4; color: #26788b; background: #fff; }
+.voucher-link:hover { background: #eff9fa; }
+.salary-muted { color: #a4afb9; font-size: 10px; }
+.salary-toast { margin: 0 0 12px; padding: 10px 12px; border: 1px solid #cbe7dc; border-radius: 7px; color: #287957; background: #edf9f3; font-size: 12px; }
+.salary-report-footer { min-height: 42px; display: flex; align-items: center; justify-content: center; }
+.salary-print-button { height: 25px; padding: 0 12px; border: 0; border-radius: 2px; color: #fff; background: #3a8eae; cursor: pointer; font-size: 9px; }
+.salary-print-button:hover { background: #2d7895; }
+.salary-report-card .pay-button, .salary-report-card .voucher-link { height: 20px; padding: 0 6px; border-radius: 2px; font-size: 7px; }
+.voucher-panel { width: min(720px, 100%); max-height: min(680px, calc(100vh - 48px)); position: relative; z-index: 1; overflow: auto; padding: 24px; border-radius: 10px; background: #fff; box-shadow: 0 18px 55px #16304455; }
+.voucher-heading { padding-bottom: 14px; border-bottom: 1px solid #e4eaee; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.voucher-heading h2 { margin: 0; color: #263c4d; font-size: 20px; }
+.voucher-heading p { margin: 5px 0 0; color: #83919e; font-size: 11px; }
+.voucher-meta { margin: 16px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+.voucher-meta div { padding: 9px 10px; border-radius: 6px; background: #f6f9fa; }
+.voucher-meta span { display: block; color: #8695a2; font-size: 10px; }
+.voucher-meta strong { display: block; margin-top: 3px; color: #304b5b; font-size: 12px; }
+.voucher-amount { padding: 14px; border-radius: 7px; color: #236d79; background: #edf8f8; display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 700; }
+.voucher-amount strong { color: #1c8792; font-size: 21px; }
+.voucher-note { margin-top: 13px; color: #758592; font-size: 11px; }
+@media (max-width: 700px) { .voucher-panel { max-height: calc(100vh - 24px); padding: 18px 14px; } .voucher-meta { grid-template-columns: 1fr; } }
+.voucher-panel { width: min(920px, calc(100vw - 48px)); max-height: min(720px, calc(100vh - 48px)); padding: 0; overflow: hidden; border-radius: 4px; background: #fff; }
+.voucher-panel > .close-button { display: none; }
+.voucher-sheet { height: 100%; display: flex; flex-direction: column; }
+.voucher-titlebar { height: 45px; padding: 0 16px; border-bottom: 1px solid #e7ebef; display: flex; align-items: center; justify-content: space-between; }
+.voucher-titlebar h2 { margin: 0; color: #3b434a; font-size: 18px; font-weight: 500; }
+.voucher-x { border: 0; color: #aeb4ba; background: transparent; font-size: 24px; line-height: 1; cursor: pointer; }
+.voucher-paper { flex: 1; overflow: auto; padding: 20px 34px 16px; color: #41474d; font-family: Arial, sans-serif; }
+.voucher-paper-head { display: flex; justify-content: space-between; gap: 25px; }
+.voucher-brand { display: flex; gap: 10px; align-items: flex-start; }
+.voucher-logo { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 4px; color: #fff; background: #163c71; font-weight: 800; }
+.voucher-brand strong { display: block; font-size: 12px; }
+.voucher-brand span:not(.voucher-logo) { display: block; margin-top: 3px; color: #525b62; font-size: 10px; }
+.voucher-form-code { min-width: 275px; text-align: center; font-size: 10px; line-height: 1.45; }
+.voucher-form-code strong, .voucher-form-code span { display: block; }
+.voucher-form-code strong { font-size: 14px; }
+.voucher-doc-head { margin-top: 23px; display: grid; grid-template-columns: 1fr 170px; align-items: start; text-align: center; }
+.voucher-doc-head h1 { margin: 0; color: #30363b; font-size: 22px; }
+.voucher-doc-head p { margin: 5px 0 0; font-size: 13px; }
+.voucher-number { padding-top: 2px; text-align: left; font-size: 10px; line-height: 1.55; }
+.voucher-number strong, .voucher-number span { display: block; }
+.voucher-number strong { font-size: 11px; }
+.voucher-fields { margin-top: 28px; display: grid; gap: 8px; font-size: 14px; }
+.voucher-fields > div { display: grid; grid-template-columns: 225px 1fr; gap: 7px; }
+.voucher-fields span { white-space: nowrap; }
+.voucher-fields strong { font-weight: 400; }
+.voucher-sign-date { margin-top: 23px; text-align: right; font-style: italic; font-size: 12px; }
+.voucher-signatures { margin-top: 17px; display: grid; grid-template-columns: repeat(5, 1fr); text-align: center; font-size: 12px; }
+.voucher-org { min-height: 85px; padding-top: 52px; text-align: center; font-size: 13px; }
+.voucher-actions { min-height: 53px; padding: 9px 16px; border-top: 1px solid #e7ebef; display: flex; align-items: center; gap: 13px; }
+.voucher-close-button { height: 30px; padding: 0 13px; border: 1px solid #d9dee3; border-radius: 2px; color: #606a73; background: #fafbfc; cursor: pointer; }
+.voucher-actions label { margin-left: auto; color: #69747d; font-size: 10px; }
+.voucher-actions input { vertical-align: -2px; }
+.voucher-print-button { height: 33px; min-width: 38px; border: 0; border-radius: 3px; color: #fff; background: #3b92b2; cursor: pointer; font-size: 12px; }
+@media (max-width: 700px) { .voucher-panel { width: calc(100vw - 24px); max-height: calc(100vh - 24px); } .voucher-paper { padding: 16px; } .voucher-paper-head { flex-direction: column; } .voucher-form-code { min-width: 0; text-align: left; } .voucher-doc-head { grid-template-columns: 1fr 130px; } .voucher-fields > div { grid-template-columns: 150px 1fr; font-size: 11px; } .voucher-signatures { font-size: 9px; } }
+@media (max-width: 700px) { .drawer { padding: 12px; } .drawer-panel { height: calc(100vh - 24px); } .payroll-layout { grid-template-columns: 116px minmax(0, 1fr); } .payroll-sidebar { padding: 12px 7px; } .payroll-main { padding: 0 10px; } .payroll-heading { margin-left: -10px; margin-right: -10px; padding: 10px; } .payroll-heading h2 { font-size: 13px; } .payroll-footer { margin-left: -10px; margin-right: -10px; padding: 10px; } .payroll-table { min-width: 480px; } .salary-breakdown .salary-lines { min-width: 380px; } .payroll-table select { width: 115px; } .payroll-form { grid-template-columns: 1fr; } }
+
+/* UX and accessibility polish */
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.form-status { min-height: 18px; margin: -8px 0 12px; color: #657786; font-size: 12px; }
+.form-status.error { color: #a23e36; }
+.form-status.loading { color: #2b7182; }
+.form-status.success { color: #287957; }
+.payroll-loading { min-height: 250px; display: grid; place-items: center; color: #647785; font-size: 13px; }
+input[aria-invalid="true"] { border-color: #c85c54 !important; box-shadow: 0 0 0 3px #c85c5422 !important; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #f2b84b; outline-offset: 2px; }
+.input-wrap:focus-within { border-color: #5da9b5; box-shadow: 0 0 0 3px #5da9b51f; }
+.field input:focus-visible { outline: 0; }
+.field .input-wrap input:focus, .field .input-wrap input:focus-visible { border: 0; outline: 0; box-shadow: none; }
+.mobile-menu-button { display: none; width: 38px; height: 36px; margin-right: 12px; border: 1px solid #d9e3e9; border-radius: 7px; color: #2b7182; background: #fff; cursor: pointer; font-size: 19px; }
+.payment-action { border: 0; padding: 0; margin: 0; }
+.payment-action legend { padding: 0; }
+.salary-report-card table { min-width: 1060px; }
+.salary-report-card th, .salary-report-card td { font-size: 11px; }
+.salary-report-card th { font-size: 10px; }
+.salary-report-card .staff-name { font-size: 11px; }
+.salary-report-card .salary-status, .salary-report-card .salary-muted { font-size: 10px; }
+.salary-report-card .pay-button, .salary-report-card .voucher-link { font-size: 10px; }
+.salary-report-card .payment-action label { font-size: 10px; }
+.salary-report-card .payment-action input { width: 12px; height: 12px; }
+@media (max-width: 700px) {
+  .mobile-menu-button { display: inline-grid; place-items: center; }
+  .topbar { position: relative; }
+  .sidebar { display: flex; position: fixed; inset: 0 auto 0 0; z-index: 30; width: min(280px, 84vw); transform: translateX(-105%); transition: transform .2s ease; box-shadow: 10px 0 28px #12384c33; }
+  .sidebar.mobile-open { transform: translateX(0); }
+  .main-shell { width: 100%; }
+  .app-shell:has(.sidebar.mobile-open)::after { content: ""; position: fixed; inset: 0; z-index: 25; background: #17384b66; }
+  #mainNav { overflow-y: auto; }
+  .salary-report-card table { min-width: 1060px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+/* Keep report printing separate from voucher printing, including browser-menu print. */
+@page salary-report { size: A4 landscape; margin: 10mm; }
+@page payment-voucher { size: A4 portrait; margin: 12mm; }
+@media print {
+  html, body { background: #fff; overflow: visible !important; }
+  .sidebar, .topbar, .page-heading, .filter-card, .salary-tabs, .salary-report-footer,
+  .form-status, .salary-toast, #drawer { display: none !important; }
+  .app-shell, .main-shell, .content { display: block; width: 100%; min-height: 0; max-width: none; margin: 0; padding: 0; }
+  body:not([data-print-target="voucher"]) #voucherModal { display: none !important; }
+
+  html:has(body[data-print-target="payroll"]), html:has(body[data-print-target="expenses"]) { page: salary-report; }
+  body[data-print-target="payroll"] .content > :not(#salaryView),
+  body[data-print-target="expenses"] .content > :not(#salaryView),
+  body[data-print-target="payroll"] #expensesCard,
+  body[data-print-target="expenses"] #payrollReportCard { display: none !important; }
+  body[data-print-target="payroll"] #salaryView,
+  body[data-print-target="payroll"] #payrollReportCard,
+  body[data-print-target="expenses"] #salaryView,
+  body[data-print-target="expenses"] #expensesCard { display: block !important; }
+  .salary-report-card, .salary-report-card .table-wrap { overflow: visible; border: 0; box-shadow: none; background: #fff; }
+  .salary-report-card table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; }
+  .salary-report-card thead { display: table-header-group; }
+  .salary-report-card tr { break-inside: avoid; }
+  .salary-report-card th, .salary-report-card td { position: static !important; height: auto; padding: 5px 3px; border: 1px solid #c9d2d9; color: #222; font-size: 8px; white-space: normal; overflow-wrap: anywhere; box-shadow: none !important; }
+  .salary-report-card .staff-name, .salary-report-card .salary-status,
+  .salary-report-card .salary-muted { color: #222; font-size: 8px; }
+  .salary-report-card th:first-child { width: 12%; }
+  .salary-report-card .staff-avatar { display: none; }
+  #salaryTable th:last-child, #salaryTable td:last-child,
+  #expensesTable th:last-child, #expensesTable td:last-child { display: none; }
+
+  html:has(body[data-print-target="voucher"]) { page: payment-voucher; }
+  body[data-print-target="voucher"] > :not(#voucherModal) { display: none !important; }
+  body[data-print-target="voucher"] #voucherModal { display: block !important; position: static; padding: 0; }
+  body[data-print-target="voucher"] .drawer-backdrop,
+  body[data-print-target="voucher"] .voucher-titlebar,
+  body[data-print-target="voucher"] .voucher-actions { display: none !important; }
+  body[data-print-target="voucher"] .voucher-panel,
+  body[data-print-target="voucher"] .voucher-sheet,
+  body[data-print-target="voucher"] .voucher-paper { display: block; position: static; width: 100%; height: auto; max-height: none; overflow: visible; padding: 0; border: 0; box-shadow: none; }
+}

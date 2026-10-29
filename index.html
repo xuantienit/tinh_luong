@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Báo cáo · Bảng chấm công</title>
+  <link rel="stylesheet" href="/static/styles.css?v=11">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">A</span><span>Aurora</span></div>
+      <div class="school-name">TRUNG TÂM NGOẠI NGỮ</div>
+      <nav id="mainNav">
+        <button type="button" class="nav-item" data-view="update"><span class="nav-icon" aria-hidden="true">⌂</span>Tổng quan</button>
+        <button type="button" class="nav-item" data-view="update"><span class="nav-icon" aria-hidden="true">◉</span>Nhân viên</button>
+        <button type="button" class="nav-item" data-view="update"><span class="nav-icon" aria-hidden="true">▣</span>Lịch làm việc</button>
+        <div class="nav-section open">
+          <button class="nav-section-title" id="reportToggle" type="button" aria-expanded="true" aria-controls="reportSubnav"><span><span class="nav-icon" aria-hidden="true">◒</span>Báo cáo</span><span class="chevron" aria-hidden="true">⌃</span></button>
+          <div class="subnav" id="reportSubnav">
+            <button type="button" class="subnav-item" data-view="update">Tình hình gửi được</button>
+            <button type="button" class="subnav-item" data-view="update">Biểu đồ học viên</button>
+            <button type="button" class="subnav-item" data-view="update">Báo cáo chuyên lớp</button>
+            <button type="button" class="subnav-item" data-view="update">Báo cáo học thử</button>
+            <button type="button" class="subnav-item" data-view="update">Báo cáo học phí</button>
+            <button type="button" class="subnav-item" data-view="update">Báo cáo tổng lớp</button>
+            <button type="button" class="subnav-item" data-view="update">Báo cáo điểm danh</button>
+            <button type="button" class="subnav-item" data-view="update">Kết quả học tập</button>
+            <button type="button" class="subnav-item active" aria-current="page" data-view="attendance">Bảng chấm công</button>
+            <button type="button" class="subnav-item" data-view="salary">Lương</button>
+            <button type="button" class="subnav-item" data-view="update">Báo cáo phòng</button>
+            <button type="button" class="subnav-item" data-view="update">Checking / Checkout</button>
+          </div>
+        </div>
+      </nav>
+      <div class="sidebar-footer"><span class="help-dot">?</span><span>Trợ giúp</span></div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar"><button type="button" class="mobile-menu-button" id="mobileMenuButton" aria-label="Mở menu điều hướng" aria-controls="mainNav" aria-expanded="false">☰</button><div class="breadcrumbs"><span>Báo cáo</span><b>/</b><strong id="breadcrumbTitle">Bảng chấm công</strong></div></header>
+      <main class="content">
+        <section id="attendanceView">
+          <div class="page-heading"><div><p class="eyebrow">BÁO CÁO</p><h1>Bảng chấm công</h1><p class="subheading">Số ca và số giờ làm việc của từng giáo viên, nhân viên.</p></div></div>
+          <section class="filter-card">
+            <div class="field search-field"><label for="search">Tìm nhân viên</label><div class="input-wrap"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></span><input id="search" type="search" placeholder="Nhập tên nhân viên"></div></div>
+            <div class="field"><label for="fromDate">Từ ngày</label><input id="fromDate" type="date" value="2026-10-01"></div>
+            <div class="field"><label for="toDate">Đến ngày</label><input id="toDate" type="date" value="2026-10-31"></div>
+            <div class="filter-actions"><button class="primary-button" id="filterButton" type="button">Lọc</button><button class="ghost-button" id="resetButton" type="button">Hủy bỏ</button></div>
+          </section>
+          <p id="attendanceStatus" class="form-status" role="status" aria-live="polite"></p>
+          <section class="card attendance-card">
+            <div class="card-heading"><div><h2>Chi tiết chấm công</h2><p>Kiểm tra thông tin trước khi tính lương.</p></div></div>
+            <div class="table-wrap"><table id="attendanceTable"><caption class="sr-only">Chi tiết ca và số giờ làm việc theo nhân viên</caption><thead></thead><tbody></tbody></table></div>
+            <div id="emptyState" class="empty-state hidden">Không tìm thấy nhân viên trong khoảng thời gian này.</div>
+          </section>
+        </section>
+        <section id="salaryView" class="hidden">
+          <div class="page-heading"><div><p class="eyebrow">BÁO CÁO</p><h1>Lương</h1><p class="subheading">Theo dõi bảng lương đã Submit và thanh toán cho giáo viên, nhân viên.</p></div></div>
+          <section class="filter-card salary-filter-card">
+            <div class="field search-field"><label for="salarySearch">Tìm nhân viên</label><div class="input-wrap"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></span><input id="salarySearch" type="search" placeholder="Họ tên"></div></div>
+            <div class="field"><label for="salaryFrom">Từ ngày</label><input id="salaryFrom" type="date" value="2026-10-01"></div>
+            <div class="field"><label for="salaryTo">Đến ngày</label><input id="salaryTo" type="date" value="2026-10-31"></div>
+            <div class="filter-actions"><button class="primary-button" id="salaryFilterButton" type="button">Lọc</button><button class="ghost-button" id="salaryResetButton" type="button">Hủy bỏ</button></div>
+          </section>
+          <p id="salaryStatus" class="form-status" role="status" aria-live="polite"></p>
+          <div class="salary-tabs" role="tablist" aria-label="Báo cáo lương">
+            <button class="salary-tab active" id="payrollTab" role="tab" aria-selected="true" aria-controls="payrollReportCard" tabindex="0" type="button" data-salary-tab="payroll">Bảng lương</button>
+            <button class="salary-tab" id="expensesTab" role="tab" aria-selected="false" aria-controls="expensesCard" tabindex="-1" type="button" data-salary-tab="expenses">Các khoản đã chi</button>
+          </div>
+          <section id="payrollReportCard" role="tabpanel" aria-labelledby="payrollTab" class="card salary-report-card">
+            <div class="salary-report-title">Bảng lương <span id="salaryPeriodLabel">01/10/2026 - 31/10/2026</span></div>
+            <div class="table-wrap"><table id="salaryTable"><caption class="sr-only">Bảng lương theo nhân viên</caption><thead></thead><tbody></tbody></table></div>
+            <div id="salaryEmptyState" class="empty-state hidden">Chưa có dữ liệu bảng lương trong khoảng thời gian này.</div>
+            <div class="salary-report-footer"><button class="salary-print-button" id="salaryPrintButton" type="button" aria-label="In bảng lương">In bảng lương</button></div>
+          </section>
+          <section id="expensesCard" role="tabpanel" aria-labelledby="expensesTab" class="card salary-report-card hidden">
+            <div class="card-heading"><div><h2>Các khoản đã chi</h2><p>Các phiếu chi lương được tạo sau khi thanh toán.</p></div></div>
+            <div class="table-wrap"><table id="expensesTable"><thead></thead><tbody></tbody></table></div>
+            <div id="expensesEmptyState" class="empty-state hidden">Chưa có khoản chi lương nào.</div>
+          </section>
+        </section>
+        <section id="updateView" class="update-view hidden"><div class="update-mark">◷</div><h1>Đang update</h1><p>Nội dung chức năng này đang được cập nhật.</p></section>
+      </main>
+    </div>
+  </div>
+
+  <div id="drawer" class="drawer hidden" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-describedby="drawerDescription">
+    <div class="drawer-backdrop" data-close="true"></div>
+    <section class="drawer-panel"><h2 id="drawerTitle" class="sr-only">Chi tiết bảng lương</h2><p id="drawerDescription" class="sr-only">Kiểm tra và Submit bảng lương cho nhân viên.</p><button class="close-button" id="closeDrawer" aria-label="Đóng bảng lương">×</button><div id="detail"></div></section>
+  </div>
+  <div id="voucherModal" class="drawer hidden" role="dialog" aria-modal="true" aria-labelledby="voucherModalTitle">
+    <div class="drawer-backdrop" data-close-voucher="true"></div>
+    <section class="voucher-panel"><h2 id="voucherModalTitle" class="sr-only">Chi tiết phiếu chi</h2><button class="close-button" id="closeVoucher" aria-label="Đóng phiếu chi">×</button><div id="voucherDetail"></div></section>
+  </div>
+  <script src="/static/app.js?v=13"></script>
+</body>
+</html>
+
+

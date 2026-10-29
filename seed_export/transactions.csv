@@ -1,0 +1,6 @@
+﻿id,staff_id,category,amount,transaction_date,description
+1,2,salary,8000000,2026-10-31,Chi lương tháng 10 - GV Thảo
+2,3,salary,5000000,2026-10-31,Chi lương tháng 10 - GV Minh
+3,4,salary,6000000,2026-10-31,Chi lương tháng 10 - NV Linh
+4,5,salary,8000000,2026-10-31,Lương cơ bản + phụ cấp quản lý - Mgr Hùng
+5,2,salary,200000,2026-10-31,Phụ cấp dạy thêm theo ca

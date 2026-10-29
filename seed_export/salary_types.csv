@@ -1,0 +1,8 @@
+﻿id,name,type,amount,unit,description
+1,Lương cơ bản GV chính thức,fixed,8000000,VND/tháng,Giáo viên chính thức
+2,Lương cơ bản GV thỉnh giảng,fixed,5000000,VND/tháng,Giáo viên thỉnh giảng
+3,Hoa hồng theo học phí,percentage,30,%,Tính theo học phí
+4,Phụ cấp dạy thêm theo ca,per_shift,200000,VND/ca,Dạy thêm theo ca
+5,Lương gia sư theo giờ,per_hour,150000,VND/giờ,Tính theo giờ
+6,Lương nhân viên hành chính,fixed,6000000,VND/tháng,Nhân viên hành chính
+7,Phụ cấp quản lý,fixed,2000000,VND/tháng,Phụ cấp quản lý

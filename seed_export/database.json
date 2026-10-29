@@ -1,0 +1,1966 @@
+{
+  "staff": [
+    {
+      "id": 2,
+      "full_name": "GV Thảo",
+      "role": "teacher"
+    },
+    {
+      "id": 3,
+      "full_name": "GV Minh",
+      "role": "teacher"
+    },
+    {
+      "id": 4,
+      "full_name": "NV Linh",
+      "role": "staff"
+    },
+    {
+      "id": 5,
+      "full_name": "Mgr Hùng",
+      "role": "manager"
+    }
+  ],
+  "salary_types": [
+    {
+      "id": 1,
+      "name": "Lương cơ bản GV chính thức",
+      "type": "fixed",
+      "amount": 8000000,
+      "unit": "VND/tháng",
+      "description": "Giáo viên chính thức"
+    },
+    {
+      "id": 2,
+      "name": "Lương cơ bản GV thỉnh giảng",
+      "type": "fixed",
+      "amount": 5000000,
+      "unit": "VND/tháng",
+      "description": "Giáo viên thỉnh giảng"
+    },
+    {
+      "id": 3,
+      "name": "Hoa hồng theo học phí",
+      "type": "percentage",
+      "amount": 30,
+      "unit": "%",
+      "description": "Tính theo học phí"
+    },
+    {
+      "id": 4,
+      "name": "Phụ cấp dạy thêm theo ca",
+      "type": "per_shift",
+      "amount": 200000,
+      "unit": "VND/ca",
+      "description": "Dạy thêm theo ca"
+    },
+    {
+      "id": 5,
+      "name": "Lương gia sư theo giờ",
+      "type": "per_hour",
+      "amount": 150000,
+      "unit": "VND/giờ",
+      "description": "Tính theo giờ"
+    },
+    {
+      "id": 6,
+      "name": "Lương nhân viên hành chính",
+      "type": "fixed",
+      "amount": 6000000,
+      "unit": "VND/tháng",
+      "description": "Nhân viên hành chính"
+    },
+    {
+      "id": 7,
+      "name": "Phụ cấp quản lý",
+      "type": "fixed",
+      "amount": 2000000,
+      "unit": "VND/tháng",
+      "description": "Phụ cấp quản lý"
+    }
+  ],
+  "staff_shifts": [
+    {
+      "id": 1,
+      "staff_id": 2,
+      "shift_date": "2026-10-01",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 2,
+      "staff_id": 4,
+      "shift_date": "2026-10-01",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 3,
+      "staff_id": 5,
+      "shift_date": "2026-10-01",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 4,
+      "staff_id": 2,
+      "shift_date": "2026-10-01",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 5,
+      "staff_id": 3,
+      "shift_date": "2026-10-01",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 6,
+      "staff_id": 2,
+      "shift_date": "2026-10-02",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 7,
+      "staff_id": 4,
+      "shift_date": "2026-10-02",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 8,
+      "staff_id": 5,
+      "shift_date": "2026-10-02",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 9,
+      "staff_id": 3,
+      "shift_date": "2026-10-03",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 10,
+      "staff_id": 3,
+      "shift_date": "2026-10-04",
+      "shift_code": "sunday_afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 11,
+      "staff_id": 2,
+      "shift_date": "2026-10-05",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 12,
+      "staff_id": 4,
+      "shift_date": "2026-10-05",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 13,
+      "staff_id": 5,
+      "shift_date": "2026-10-05",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 14,
+      "staff_id": 2,
+      "shift_date": "2026-10-06",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 15,
+      "staff_id": 4,
+      "shift_date": "2026-10-06",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 16,
+      "staff_id": 5,
+      "shift_date": "2026-10-06",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 17,
+      "staff_id": 2,
+      "shift_date": "2026-10-06",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 18,
+      "staff_id": 3,
+      "shift_date": "2026-10-06",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 19,
+      "staff_id": 2,
+      "shift_date": "2026-10-07",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 20,
+      "staff_id": 4,
+      "shift_date": "2026-10-07",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 21,
+      "staff_id": 5,
+      "shift_date": "2026-10-07",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 22,
+      "staff_id": 2,
+      "shift_date": "2026-10-08",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 23,
+      "staff_id": 4,
+      "shift_date": "2026-10-08",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 24,
+      "staff_id": 5,
+      "shift_date": "2026-10-08",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 25,
+      "staff_id": 2,
+      "shift_date": "2026-10-08",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 26,
+      "staff_id": 3,
+      "shift_date": "2026-10-08",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 27,
+      "staff_id": 2,
+      "shift_date": "2026-10-09",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 28,
+      "staff_id": 4,
+      "shift_date": "2026-10-09",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 29,
+      "staff_id": 5,
+      "shift_date": "2026-10-09",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 30,
+      "staff_id": 3,
+      "shift_date": "2026-10-10",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 31,
+      "staff_id": 3,
+      "shift_date": "2026-10-11",
+      "shift_code": "sunday_afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 32,
+      "staff_id": 2,
+      "shift_date": "2026-10-12",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 33,
+      "staff_id": 4,
+      "shift_date": "2026-10-12",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 34,
+      "staff_id": 5,
+      "shift_date": "2026-10-12",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 35,
+      "staff_id": 2,
+      "shift_date": "2026-10-13",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 36,
+      "staff_id": 4,
+      "shift_date": "2026-10-13",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 37,
+      "staff_id": 5,
+      "shift_date": "2026-10-13",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 38,
+      "staff_id": 2,
+      "shift_date": "2026-10-13",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 39,
+      "staff_id": 3,
+      "shift_date": "2026-10-13",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 40,
+      "staff_id": 2,
+      "shift_date": "2026-10-14",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 41,
+      "staff_id": 4,
+      "shift_date": "2026-10-14",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 42,
+      "staff_id": 5,
+      "shift_date": "2026-10-14",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 43,
+      "staff_id": 2,
+      "shift_date": "2026-10-15",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 44,
+      "staff_id": 4,
+      "shift_date": "2026-10-15",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 45,
+      "staff_id": 5,
+      "shift_date": "2026-10-15",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 46,
+      "staff_id": 2,
+      "shift_date": "2026-10-15",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 47,
+      "staff_id": 3,
+      "shift_date": "2026-10-15",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 48,
+      "staff_id": 2,
+      "shift_date": "2026-10-16",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 49,
+      "staff_id": 4,
+      "shift_date": "2026-10-16",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 50,
+      "staff_id": 5,
+      "shift_date": "2026-10-16",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 51,
+      "staff_id": 3,
+      "shift_date": "2026-10-17",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 52,
+      "staff_id": 3,
+      "shift_date": "2026-10-18",
+      "shift_code": "sunday_afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 53,
+      "staff_id": 2,
+      "shift_date": "2026-10-19",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 54,
+      "staff_id": 4,
+      "shift_date": "2026-10-19",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 55,
+      "staff_id": 5,
+      "shift_date": "2026-10-19",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 56,
+      "staff_id": 2,
+      "shift_date": "2026-10-20",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 57,
+      "staff_id": 4,
+      "shift_date": "2026-10-20",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 58,
+      "staff_id": 5,
+      "shift_date": "2026-10-20",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 59,
+      "staff_id": 2,
+      "shift_date": "2026-10-20",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 60,
+      "staff_id": 3,
+      "shift_date": "2026-10-20",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 61,
+      "staff_id": 2,
+      "shift_date": "2026-10-21",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 62,
+      "staff_id": 4,
+      "shift_date": "2026-10-21",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 63,
+      "staff_id": 5,
+      "shift_date": "2026-10-21",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 64,
+      "staff_id": 2,
+      "shift_date": "2026-10-22",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 65,
+      "staff_id": 4,
+      "shift_date": "2026-10-22",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 66,
+      "staff_id": 5,
+      "shift_date": "2026-10-22",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 67,
+      "staff_id": 2,
+      "shift_date": "2026-10-22",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 68,
+      "staff_id": 3,
+      "shift_date": "2026-10-22",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 69,
+      "staff_id": 2,
+      "shift_date": "2026-10-23",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 70,
+      "staff_id": 4,
+      "shift_date": "2026-10-23",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 71,
+      "staff_id": 5,
+      "shift_date": "2026-10-23",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 72,
+      "staff_id": 3,
+      "shift_date": "2026-10-24",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 73,
+      "staff_id": 3,
+      "shift_date": "2026-10-25",
+      "shift_code": "sunday_afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 74,
+      "staff_id": 2,
+      "shift_date": "2026-10-26",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 75,
+      "staff_id": 4,
+      "shift_date": "2026-10-26",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 76,
+      "staff_id": 5,
+      "shift_date": "2026-10-26",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 77,
+      "staff_id": 2,
+      "shift_date": "2026-10-27",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 78,
+      "staff_id": 4,
+      "shift_date": "2026-10-27",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 79,
+      "staff_id": 5,
+      "shift_date": "2026-10-27",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 80,
+      "staff_id": 2,
+      "shift_date": "2026-10-27",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 81,
+      "staff_id": 3,
+      "shift_date": "2026-10-27",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 82,
+      "staff_id": 2,
+      "shift_date": "2026-10-28",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 83,
+      "staff_id": 4,
+      "shift_date": "2026-10-28",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 84,
+      "staff_id": 5,
+      "shift_date": "2026-10-28",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 85,
+      "staff_id": 2,
+      "shift_date": "2026-10-29",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 86,
+      "staff_id": 4,
+      "shift_date": "2026-10-29",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 87,
+      "staff_id": 5,
+      "shift_date": "2026-10-29",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 88,
+      "staff_id": 2,
+      "shift_date": "2026-10-29",
+      "shift_code": "evening",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "source": "schedule"
+    },
+    {
+      "id": 89,
+      "staff_id": 3,
+      "shift_date": "2026-10-29",
+      "shift_code": "afternoon",
+      "start_time": "13:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 90,
+      "staff_id": 2,
+      "shift_date": "2026-10-30",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    },
+    {
+      "id": 91,
+      "staff_id": 4,
+      "shift_date": "2026-10-30",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 92,
+      "staff_id": 5,
+      "shift_date": "2026-10-30",
+      "shift_code": "admin",
+      "start_time": "08:30",
+      "end_time": "17:30",
+      "source": "schedule"
+    },
+    {
+      "id": 93,
+      "staff_id": 3,
+      "shift_date": "2026-10-31",
+      "shift_code": "morning",
+      "start_time": "08:00",
+      "end_time": "12:00",
+      "source": "schedule"
+    }
+  ],
+  "staff_attendance": [
+    {
+      "id": 1,
+      "staff_id": 2,
+      "attendance_date": "2026-10-01",
+      "checkin_at": "2026-10-01 08:20:00",
+      "checkout_at": "2026-10-01 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 20 phút"
+    },
+    {
+      "id": 2,
+      "staff_id": 4,
+      "attendance_date": "2026-10-01",
+      "checkin_at": "2026-10-01 08:30:00",
+      "checkout_at": "2026-10-01 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 3,
+      "staff_id": 5,
+      "attendance_date": "2026-10-01",
+      "checkin_at": "2026-10-01 08:30:00",
+      "checkout_at": "2026-10-01 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 4,
+      "staff_id": 3,
+      "attendance_date": "2026-10-01",
+      "checkin_at": "2026-10-01 13:30:00",
+      "checkout_at": "2026-10-01 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 5,
+      "staff_id": 2,
+      "attendance_date": "2026-10-02",
+      "checkin_at": "2026-10-02 08:00:00",
+      "checkout_at": "2026-10-02 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 6,
+      "staff_id": 4,
+      "attendance_date": "2026-10-02",
+      "checkin_at": "2026-10-02 08:30:00",
+      "checkout_at": "2026-10-02 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 7,
+      "staff_id": 5,
+      "attendance_date": "2026-10-02",
+      "checkin_at": "2026-10-02 08:30:00",
+      "checkout_at": "2026-10-02 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 8,
+      "staff_id": 3,
+      "attendance_date": "2026-10-03",
+      "checkin_at": "2026-10-03 13:30:00",
+      "checkout_at": "2026-10-03 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 9,
+      "staff_id": 3,
+      "attendance_date": "2026-10-04",
+      "checkin_at": "2026-10-04 13:30:00",
+      "checkout_at": "2026-10-04 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 10,
+      "staff_id": 2,
+      "attendance_date": "2026-10-05",
+      "checkin_at": "2026-10-05 08:05:00",
+      "checkout_at": "2026-10-05 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 5 phút"
+    },
+    {
+      "id": 11,
+      "staff_id": 4,
+      "attendance_date": "2026-10-05",
+      "checkin_at": "2026-10-05 08:30:00",
+      "checkout_at": "2026-10-05 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 12,
+      "staff_id": 5,
+      "attendance_date": "2026-10-05",
+      "checkin_at": "2026-10-05 08:30:00",
+      "checkout_at": "2026-10-05 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 13,
+      "staff_id": 2,
+      "attendance_date": "2026-10-06",
+      "checkin_at": "2026-10-06 08:00:00",
+      "checkout_at": "2026-10-06 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 14,
+      "staff_id": 4,
+      "attendance_date": "2026-10-06",
+      "checkin_at": "2026-10-06 08:30:00",
+      "checkout_at": "2026-10-06 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 15,
+      "staff_id": 5,
+      "attendance_date": "2026-10-06",
+      "checkin_at": "2026-10-06 08:30:00",
+      "checkout_at": "2026-10-06 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 16,
+      "staff_id": 3,
+      "attendance_date": "2026-10-06",
+      "checkin_at": "2026-10-06 13:30:00",
+      "checkout_at": "2026-10-06 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 17,
+      "staff_id": 2,
+      "attendance_date": "2026-10-07",
+      "checkin_at": "2026-10-07 08:00:00",
+      "checkout_at": "2026-10-07 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 18,
+      "staff_id": 4,
+      "attendance_date": "2026-10-07",
+      "checkin_at": "2026-10-07 08:30:00",
+      "checkout_at": "2026-10-07 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 19,
+      "staff_id": 5,
+      "attendance_date": "2026-10-07",
+      "checkin_at": "2026-10-07 08:30:00",
+      "checkout_at": "2026-10-07 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 20,
+      "staff_id": 2,
+      "attendance_date": "2026-10-08",
+      "checkin_at": "2026-10-08 08:00:00",
+      "checkout_at": "2026-10-08 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 21,
+      "staff_id": 4,
+      "attendance_date": "2026-10-08",
+      "checkin_at": "2026-10-08 08:30:00",
+      "checkout_at": null,
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "incomplete",
+      "note": "Chưa checkout"
+    },
+    {
+      "id": 22,
+      "staff_id": 5,
+      "attendance_date": "2026-10-08",
+      "checkin_at": "2026-10-08 08:30:00",
+      "checkout_at": "2026-10-08 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 23,
+      "staff_id": 3,
+      "attendance_date": "2026-10-08",
+      "checkin_at": "2026-10-08 13:30:00",
+      "checkout_at": "2026-10-08 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 24,
+      "staff_id": 2,
+      "attendance_date": "2026-10-09",
+      "checkin_at": "2026-10-09 08:05:00",
+      "checkout_at": "2026-10-09 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 5 phút"
+    },
+    {
+      "id": 25,
+      "staff_id": 4,
+      "attendance_date": "2026-10-09",
+      "checkin_at": "2026-10-09 08:30:00",
+      "checkout_at": "2026-10-09 16:45:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "early_leave",
+      "note": "Về sớm 45 phút"
+    },
+    {
+      "id": 26,
+      "staff_id": 5,
+      "attendance_date": "2026-10-09",
+      "checkin_at": "2026-10-09 08:30:00",
+      "checkout_at": "2026-10-09 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 27,
+      "staff_id": 3,
+      "attendance_date": "2026-10-10",
+      "checkin_at": "2026-10-10 13:30:00",
+      "checkout_at": "2026-10-10 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 28,
+      "staff_id": 3,
+      "attendance_date": "2026-10-11",
+      "checkin_at": "2026-10-11 13:30:00",
+      "checkout_at": "2026-10-11 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 29,
+      "staff_id": 2,
+      "attendance_date": "2026-10-12",
+      "checkin_at": "2026-10-12 08:00:00",
+      "checkout_at": "2026-10-12 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 30,
+      "staff_id": 4,
+      "attendance_date": "2026-10-12",
+      "checkin_at": "2026-10-12 08:30:00",
+      "checkout_at": "2026-10-12 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 31,
+      "staff_id": 5,
+      "attendance_date": "2026-10-12",
+      "checkin_at": "2026-10-12 08:30:00",
+      "checkout_at": "2026-10-12 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 32,
+      "staff_id": 2,
+      "attendance_date": "2026-10-13",
+      "checkin_at": "2026-10-13 08:05:00",
+      "checkout_at": "2026-10-13 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 5 phút"
+    },
+    {
+      "id": 33,
+      "staff_id": 4,
+      "attendance_date": "2026-10-13",
+      "checkin_at": "2026-10-13 08:30:00",
+      "checkout_at": "2026-10-13 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 34,
+      "staff_id": 5,
+      "attendance_date": "2026-10-13",
+      "checkin_at": "2026-10-13 08:30:00",
+      "checkout_at": "2026-10-13 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 35,
+      "staff_id": 2,
+      "attendance_date": "2026-10-14",
+      "checkin_at": "2026-10-14 08:00:00",
+      "checkout_at": "2026-10-14 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 36,
+      "staff_id": 4,
+      "attendance_date": "2026-10-14",
+      "checkin_at": "2026-10-14 08:30:00",
+      "checkout_at": "2026-10-14 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 37,
+      "staff_id": 5,
+      "attendance_date": "2026-10-14",
+      "checkin_at": "2026-10-14 08:30:00",
+      "checkout_at": "2026-10-14 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 38,
+      "staff_id": 2,
+      "attendance_date": "2026-10-15",
+      "checkin_at": "2026-10-15 08:00:00",
+      "checkout_at": "2026-10-15 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 39,
+      "staff_id": 4,
+      "attendance_date": "2026-10-15",
+      "checkin_at": "2026-10-15 08:30:00",
+      "checkout_at": "2026-10-15 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 40,
+      "staff_id": 5,
+      "attendance_date": "2026-10-15",
+      "checkin_at": "2026-10-15 08:30:00",
+      "checkout_at": "2026-10-15 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 41,
+      "staff_id": 3,
+      "attendance_date": "2026-10-15",
+      "checkin_at": "2026-10-15 13:30:00",
+      "checkout_at": "2026-10-15 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 42,
+      "staff_id": 2,
+      "attendance_date": "2026-10-16",
+      "checkin_at": "2026-10-16 08:00:00",
+      "checkout_at": "2026-10-16 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 43,
+      "staff_id": 4,
+      "attendance_date": "2026-10-16",
+      "checkin_at": "2026-10-16 08:30:00",
+      "checkout_at": "2026-10-16 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 44,
+      "staff_id": 5,
+      "attendance_date": "2026-10-16",
+      "checkin_at": "2026-10-16 08:30:00",
+      "checkout_at": "2026-10-16 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 45,
+      "staff_id": 3,
+      "attendance_date": "2026-10-17",
+      "checkin_at": "2026-10-17 13:30:00",
+      "checkout_at": "2026-10-17 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 46,
+      "staff_id": 3,
+      "attendance_date": "2026-10-18",
+      "checkin_at": "2026-10-18 13:30:00",
+      "checkout_at": "2026-10-18 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 47,
+      "staff_id": 2,
+      "attendance_date": "2026-10-19",
+      "checkin_at": "2026-10-19 08:20:00",
+      "checkout_at": "2026-10-19 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 20 phút"
+    },
+    {
+      "id": 48,
+      "staff_id": 4,
+      "attendance_date": "2026-10-19",
+      "checkin_at": "2026-10-19 08:30:00",
+      "checkout_at": "2026-10-19 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 49,
+      "staff_id": 5,
+      "attendance_date": "2026-10-19",
+      "checkin_at": "2026-10-19 08:30:00",
+      "checkout_at": "2026-10-19 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 50,
+      "staff_id": 2,
+      "attendance_date": "2026-10-20",
+      "checkin_at": "2026-10-20 08:00:00",
+      "checkout_at": "2026-10-20 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 51,
+      "staff_id": 4,
+      "attendance_date": "2026-10-20",
+      "checkin_at": "2026-10-20 08:30:00",
+      "checkout_at": "2026-10-20 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 52,
+      "staff_id": 5,
+      "attendance_date": "2026-10-20",
+      "checkin_at": "2026-10-20 08:30:00",
+      "checkout_at": "2026-10-20 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 53,
+      "staff_id": 3,
+      "attendance_date": "2026-10-20",
+      "checkin_at": "2026-10-20 13:30:00",
+      "checkout_at": "2026-10-20 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 54,
+      "staff_id": 2,
+      "attendance_date": "2026-10-21",
+      "checkin_at": "2026-10-21 08:05:00",
+      "checkout_at": "2026-10-21 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 5 phút"
+    },
+    {
+      "id": 55,
+      "staff_id": 4,
+      "attendance_date": "2026-10-21",
+      "checkin_at": "2026-10-21 08:30:00",
+      "checkout_at": "2026-10-21 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 56,
+      "staff_id": 5,
+      "attendance_date": "2026-10-21",
+      "checkin_at": "2026-10-21 08:30:00",
+      "checkout_at": "2026-10-21 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 57,
+      "staff_id": 2,
+      "attendance_date": "2026-10-22",
+      "checkin_at": "2026-10-22 08:00:00",
+      "checkout_at": "2026-10-22 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 58,
+      "staff_id": 4,
+      "attendance_date": "2026-10-22",
+      "checkin_at": "2026-10-22 08:30:00",
+      "checkout_at": null,
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "incomplete",
+      "note": "Chưa checkout"
+    },
+    {
+      "id": 59,
+      "staff_id": 5,
+      "attendance_date": "2026-10-22",
+      "checkin_at": "2026-10-22 08:30:00",
+      "checkout_at": "2026-10-22 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 60,
+      "staff_id": 2,
+      "attendance_date": "2026-10-23",
+      "checkin_at": "2026-10-23 08:00:00",
+      "checkout_at": "2026-10-23 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 61,
+      "staff_id": 4,
+      "attendance_date": "2026-10-23",
+      "checkin_at": "2026-10-23 08:30:00",
+      "checkout_at": "2026-10-23 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 62,
+      "staff_id": 5,
+      "attendance_date": "2026-10-23",
+      "checkin_at": "2026-10-23 08:30:00",
+      "checkout_at": "2026-10-23 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 63,
+      "staff_id": 3,
+      "attendance_date": "2026-10-24",
+      "checkin_at": "2026-10-24 13:30:00",
+      "checkout_at": "2026-10-24 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 64,
+      "staff_id": 3,
+      "attendance_date": "2026-10-25",
+      "checkin_at": "2026-10-25 13:30:00",
+      "checkout_at": "2026-10-25 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 65,
+      "staff_id": 2,
+      "attendance_date": "2026-10-26",
+      "checkin_at": "2026-10-26 08:00:00",
+      "checkout_at": "2026-10-26 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 66,
+      "staff_id": 4,
+      "attendance_date": "2026-10-26",
+      "checkin_at": "2026-10-26 08:30:00",
+      "checkout_at": "2026-10-26 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 67,
+      "staff_id": 5,
+      "attendance_date": "2026-10-26",
+      "checkin_at": "2026-10-26 08:30:00",
+      "checkout_at": "2026-10-26 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 68,
+      "staff_id": 2,
+      "attendance_date": "2026-10-27",
+      "checkin_at": "2026-10-27 08:00:00",
+      "checkout_at": "2026-10-27 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 69,
+      "staff_id": 4,
+      "attendance_date": "2026-10-27",
+      "checkin_at": "2026-10-27 08:30:00",
+      "checkout_at": "2026-10-27 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 70,
+      "staff_id": 5,
+      "attendance_date": "2026-10-27",
+      "checkin_at": "2026-10-27 08:30:00",
+      "checkout_at": "2026-10-27 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 71,
+      "staff_id": 3,
+      "attendance_date": "2026-10-27",
+      "checkin_at": "2026-10-27 13:30:00",
+      "checkout_at": "2026-10-27 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 72,
+      "staff_id": 2,
+      "attendance_date": "2026-10-28",
+      "checkin_at": "2026-10-28 08:20:00",
+      "checkout_at": "2026-10-28 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 20 phút"
+    },
+    {
+      "id": 73,
+      "staff_id": 4,
+      "attendance_date": "2026-10-28",
+      "checkin_at": "2026-10-28 08:30:00",
+      "checkout_at": "2026-10-28 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 74,
+      "staff_id": 5,
+      "attendance_date": "2026-10-28",
+      "checkin_at": "2026-10-28 08:30:00",
+      "checkout_at": "2026-10-28 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 75,
+      "staff_id": 2,
+      "attendance_date": "2026-10-29",
+      "checkin_at": "2026-10-29 08:05:00",
+      "checkout_at": "2026-10-29 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "late",
+      "note": "Đi muộn 5 phút"
+    },
+    {
+      "id": 76,
+      "staff_id": 4,
+      "attendance_date": "2026-10-29",
+      "checkin_at": "2026-10-29 08:30:00",
+      "checkout_at": "2026-10-29 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 77,
+      "staff_id": 5,
+      "attendance_date": "2026-10-29",
+      "checkin_at": "2026-10-29 08:30:00",
+      "checkout_at": "2026-10-29 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 78,
+      "staff_id": 3,
+      "attendance_date": "2026-10-29",
+      "checkin_at": "2026-10-29 13:30:00",
+      "checkout_at": "2026-10-29 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 79,
+      "staff_id": 2,
+      "attendance_date": "2026-10-30",
+      "checkin_at": "2026-10-30 08:00:00",
+      "checkout_at": "2026-10-30 12:00:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 80,
+      "staff_id": 4,
+      "attendance_date": "2026-10-30",
+      "checkin_at": "2026-10-30 08:30:00",
+      "checkout_at": "2026-10-30 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 81,
+      "staff_id": 5,
+      "attendance_date": "2026-10-30",
+      "checkin_at": "2026-10-30 08:30:00",
+      "checkout_at": "2026-10-30 17:30:00",
+      "checkin_source": "camera",
+      "checkout_source": "camera",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 82,
+      "staff_id": 3,
+      "attendance_date": "2026-10-31",
+      "checkin_at": "2026-10-31 13:30:00",
+      "checkout_at": "2026-10-31 17:30:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": null
+    },
+    {
+      "id": 83,
+      "staff_id": 2,
+      "attendance_date": "2026-10-01",
+      "checkin_at": "2026-10-01 18:00:00",
+      "checkout_at": "2026-10-01 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 84,
+      "staff_id": 2,
+      "attendance_date": "2026-10-06",
+      "checkin_at": "2026-10-06 18:00:00",
+      "checkout_at": "2026-10-06 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 85,
+      "staff_id": 2,
+      "attendance_date": "2026-10-08",
+      "checkin_at": "2026-10-08 18:00:00",
+      "checkout_at": "2026-10-08 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 86,
+      "staff_id": 2,
+      "attendance_date": "2026-10-13",
+      "checkin_at": "2026-10-13 18:00:00",
+      "checkout_at": "2026-10-13 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 87,
+      "staff_id": 2,
+      "attendance_date": "2026-10-15",
+      "checkin_at": "2026-10-15 18:00:00",
+      "checkout_at": "2026-10-15 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 88,
+      "staff_id": 2,
+      "attendance_date": "2026-10-20",
+      "checkin_at": "2026-10-20 18:00:00",
+      "checkout_at": "2026-10-20 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 89,
+      "staff_id": 2,
+      "attendance_date": "2026-10-22",
+      "checkin_at": "2026-10-22 18:00:00",
+      "checkout_at": "2026-10-22 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 90,
+      "staff_id": 2,
+      "attendance_date": "2026-10-27",
+      "checkin_at": "2026-10-27 18:00:00",
+      "checkout_at": "2026-10-27 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    },
+    {
+      "id": 91,
+      "staff_id": 2,
+      "attendance_date": "2026-10-29",
+      "checkin_at": "2026-10-29 18:00:00",
+      "checkout_at": "2026-10-29 21:00:00",
+      "checkin_source": "manual",
+      "checkout_source": "manual",
+      "status": "on_time",
+      "note": "Bổ sung dữ liệu demo"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "staff_id": 2,
+      "category": "salary",
+      "amount": 8000000,
+      "transaction_date": "2026-10-31",
+      "description": "Chi lương tháng 10 - GV Thảo"
+    },
+    {
+      "id": 2,
+      "staff_id": 3,
+      "category": "salary",
+      "amount": 5000000,
+      "transaction_date": "2026-10-31",
+      "description": "Chi lương tháng 10 - GV Minh"
+    },
+    {
+      "id": 3,
+      "staff_id": 4,
+      "category": "salary",
+      "amount": 6000000,
+      "transaction_date": "2026-10-31",
+      "description": "Chi lương tháng 10 - NV Linh"
+    },
+    {
+      "id": 4,
+      "staff_id": 5,
+      "category": "salary",
+      "amount": 8000000,
+      "transaction_date": "2026-10-31",
+      "description": "Lương cơ bản + phụ cấp quản lý - Mgr Hùng"
+    },
+    {
+      "id": 5,
+      "staff_id": 2,
+      "category": "salary",
+      "amount": 200000,
+      "transaction_date": "2026-10-31",
+      "description": "Phụ cấp dạy thêm theo ca"
+    }
+  ]
+}
